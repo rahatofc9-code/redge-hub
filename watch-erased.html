@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Watch Erased | REDGE HUB</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="watch-page">
+
+        <div class="watch-container">
+
+            <h1>Watch Erased</h1>
+
+            <p class="watch-subtitle" id="episode-title">
+                Erased - Episode 1
+            </p>
+
+            <!-- VIDEO PLAYER -->
+            <div class="custom-player" id="custom-player">
+
+                <video
+                    id="anime-video"
+                    src="videos/erased-ep1.mp4"
+                    poster="images/erased.jpg"
+                    preload="metadata"
+                >
+                    Your browser does not support video playback.
+                </video>
+
+                <!-- PLAYER CONTROLS -->
+                <div class="player-controls">
+
+                    <!-- PROGRESS -->
+                    <div class="progress-row">
+
+                        <span id="current-time">
+                            00:00
+                        </span>
+
+                        <input
+                            type="range"
+                            id="progress-bar"
+                            min="0"
+                            max="100"
+                            value="0"
+                        >
+
+                        <span id="duration">
+                            00:00
+                        </span>
+
+                    </div>
+
+                    <!-- CONTROL ROW -->
+                    <div class="control-row">
+
+                        <!-- LEFT CONTROLS -->
+                        <div class="main-controls">
+
+                            <button
+                                class="control-btn"
+                                type="button"
+                                onclick="skipVideo(-10)"
+                            >
+                                &lt;&lt; 10
+                            </button>
+
+                            <button
+                                class="play-btn"
+                                id="play-pause-btn"
+                                type="button"
+                                onclick="togglePlay()"
+                            >
+                                Play
+                            </button>
+
+                            <button
+                                class="control-btn"
+                                type="button"
+                                onclick="skipVideo(10)"
+                            >
+                                10 &gt;&gt;
+                            </button>
+
+                        </div>
+
+                        <!-- RIGHT CONTROLS -->
+                        <div class="right-controls">
+
+                            <!-- VOLUME -->
+                            <div class="volume-control">
+
+                                <button
+                                    class="sound-btn"
+                                    id="sound-button"
+                                    type="button"
+                                    onclick="toggleMute()"
+                                >
+                                    Sound
+                                </button>
+
+                                <input
+                                    type="range"
+                                    id="volume-bar"
+                                    min="0"
+                                    max="1"
+                                    step="0.05"
+                                    value="1"
+                                >
+
+                            </div>
+
+                            <!-- SETTINGS -->
+                            <div class="settings-area">
+
+                                <button
+                                    class="control-btn"
+                                    type="button"
+                                    onclick="toggleSettings()"
+                                >
+                                    Set
+                                </button>
+
+                                <div
+                                    class="speed-menu"
+                                    id="speed-menu"
+                                >
+
+                                    <p>
+                                        Playback Speed
+                                    </p>
+
+                                    <button
+                                        type="button"
+                                        onclick="setSpeed(0.75, this)"
+                                    >
+                                        0.75x
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="selected-speed"
+                                        onclick="setSpeed(1, this)"
+                                    >
+                                        Normal
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        onclick="setSpeed(1.25, this)"
+                                    >
+                                        1.25x
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        onclick="setSpeed(1.5, this)"
+                                    >
+                                        1.5x
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        onclick="setSpeed(2, this)"
+                                    >
+                                        2x
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                            <!-- FULLSCREEN -->
+                            <button
+                                class="control-btn"
+                                type="button"
+                                onclick="toggleFullscreen()"
+                            >
+                                Full
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ERROR MESSAGE -->
+            <p
+                id="video-message"
+                style="
+                    color:#e50914;
+                    margin-top:12px;
+                    display:none;
+                "
+            ></p>
+
+            <!-- EPISODE LIST -->
+            <div class="episode-section">
+
+                <h2>
+                    Episodes
+                </h2>
+
+                <div class="episode-list">
+
+                    <button
+                        class="episode-btn active"
+                        type="button"
+                        onclick="changeEpisode(1)"
+                    >
+                        Episode 1
+                    </button>
+
+                    <button
+                        class="episode-btn"
+                        type="button"
+                        onclick="changeEpisode(2)"
+                    >
+                        Episode 2
+                    </button>
+
+                    <button
+                        class="episode-btn"
+                        type="button"
+                        onclick="changeEpisode(3)"
+                    >
+                        Episode 3
+                    </button>
+
+                    <button
+                        class="episode-btn"
+                        type="button"
+                        onclick="changeEpisode(4)"
+                    >
+                        Episode 4
+                    </button>
+
+                    <button
+                        class="episode-btn"
+                        type="button"
+                        onclick="changeEpisode(5)"
+                    >
+                        Episode 5
+                    </button>
+
+                    <button
+                        class="episode-btn"
+                        type="button"
+                        onclick="changeEpisode(6)"
+                    >
+                        Episode 6
+                    </button>
+
+                    <button
+                        class="episode-btn"
+                        type="button"
+                        onclick="changeEpisode(7)"
+                    >
+                        Episode 7
+                    </button>
+
+                    <button
+                        class="episode-btn"
+                        type="button"
+                        onclick="changeEpisode(8)"
+                    >
+                        Episode 8
+                    </button>
+
+                    <button
+                        class="episode-btn"
+                        type="button"
+                        onclick="changeEpisode(9)"
+                    >
+                        Episode 9
+                    </button>
+
+                    <button
+                        class="episode-btn"
+                        type="button"
+                        onclick="changeEpisode(10)"
+                    >
+                        Episode 10
+                    </button>
+
+                    <button
+                        class="episode-btn"
+                        type="button"
+                        onclick="changeEpisode(11)"
+                    >
+                        Episode 11
+                    </button>
+
+                    <button
+                        class="episode-btn"
+                        type="button"
+                        onclick="changeEpisode(12)"
+                    >
+                        Episode 12
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- BACK BUTTON -->
+            <a
+                href="erased.html"
+                class="back-btn"
+            >
+                Back to Erased
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            Copyright 2026 REDGE HUB.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        const video =
+            document.getElementById("anime-video");
+
+        const player =
+            document.getElementById("custom-player");
+
+        const playButton =
+            document.getElementById("play-pause-btn");
+
+        const soundButton =
+            document.getElementById("sound-button");
+
+        const progressBar =
+            document.getElementById("progress-bar");
+
+        const volumeBar =
+            document.getElementById("volume-bar");
+
+        const currentTimeText =
+            document.getElementById("current-time");
+
+        const durationText =
+            document.getElementById("duration");
+
+        const episodeTitle =
+            document.getElementById("episode-title");
+
+        const message =
+            document.getElementById("video-message");
+
+
+        /* FORMAT TIME */
+
+        function formatTime(seconds) {
+
+            if (!isFinite(seconds)) {
+                return "00:00";
+            }
+
+            const minutes =
+                Math.floor(seconds / 60);
+
+            const remainingSeconds =
+                Math.floor(seconds % 60);
+
+            return (
+                String(minutes).padStart(2, "0")
+                + ":" +
+                String(remainingSeconds).padStart(2, "0")
+            );
+        }
+
+
+        /* PLAY / PAUSE */
+
+        function togglePlay() {
+
+            if (video.paused) {
+
+                video.play();
+
+            } else {
+
+                video.pause();
+
+            }
+
+        }
+
+
+        /* SKIP 10 SECONDS */
+
+        function skipVideo(seconds) {
+
+            video.currentTime =
+                Math.max(
+                    0,
+                    Math.min(
+                        video.currentTime + seconds,
+                        video.duration
+                    )
+                );
+
+        }
+
+
+        /* MUTE */
+
+        function toggleMute() {
+
+            video.muted =
+                !video.muted;
+
+            soundButton.textContent =
+                video.muted
+                ? "Muted"
+                : "Sound";
+
+        }
+
+
+        /* SETTINGS MENU */
+
+        function toggleSettings() {
+
+            document
+                .getElementById("speed-menu")
+                .classList
+                .toggle("show-speed-menu");
+
+        }
+
+
+        /* PLAYBACK SPEED */
+
+        function setSpeed(
+            speed,
+            clickedButton
+        ) {
+
+            video.playbackRate =
+                speed;
+
+            document
+                .querySelectorAll(
+                    ".speed-menu button"
+                )
+                .forEach(
+                    function(button) {
+
+                        button.classList
+                            .remove(
+                                "selected-speed"
+                            );
+
+                    }
+                );
+
+            clickedButton.classList
+                .add("selected-speed");
+
+            document
+                .getElementById("speed-menu")
+                .classList
+                .remove(
+                    "show-speed-menu"
+                );
+
+        }
+
+
+        /* FULLSCREEN */
+
+        function toggleFullscreen() {
+
+            if (!document.fullscreenElement) {
+
+                player.requestFullscreen();
+
+            } else {
+
+                document.exitFullscreen();
+
+            }
+
+        }
+
+
+        /* CHANGE EPISODE */
+
+        function changeEpisode(
+            episode
+        ) {
+
+            video.pause();
+
+            video.src =
+                "videos/erased-ep"
+                + episode
+                + ".mp4";
+
+            video.load();
+
+            episodeTitle.textContent =
+                "Erased - Episode "
+                + episode;
+
+            message.style.display =
+                "none";
+
+
+            /* REMOVE ACTIVE */
+
+            document
+                .querySelectorAll(
+                    ".episode-btn"
+                )
+                .forEach(
+                    function(button) {
+
+                        button.classList
+                            .remove(
+                                "active"
+                            );
+
+                    }
+                );
+
+
+            /* ADD ACTIVE */
+
+            document
+                .querySelectorAll(
+                    ".episode-btn"
+                )
+                [episode - 1]
+                .classList
+                .add("active");
+
+
+            /* PLAY */
+
+            video.play()
+                .catch(
+                    function() {
+
+                        /* Browser may block autoplay */
+
+                    }
+                );
+
+        }
+
+
+        /* VIDEO LOADED */
+
+        video.addEventListener(
+            "loadedmetadata",
+            function() {
+
+                durationText.textContent =
+                    formatTime(
+                        video.duration
+                    );
+
+            }
+        );
+
+
+        /* TIME UPDATE */
+
+        video.addEventListener(
+            "timeupdate",
+            function() {
+
+                currentTimeText.textContent =
+                    formatTime(
+                        video.currentTime
+                    );
+
+                if (video.duration) {
+
+                    progressBar.value =
+                        (
+                            video.currentTime
+                            /
+                            video.duration
+                        )
+                        * 100;
+
+                }
+
+            }
+        );
+
+
+        /* PROGRESS BAR */
+
+        progressBar.addEventListener(
+            "input",
+            function() {
+
+                if (video.duration) {
+
+                    video.currentTime =
+                        (
+                            progressBar.value
+                            /
+                            100
+                        )
+                        * video.duration;
+
+                }
+
+            }
+        );
+
+
+        /* VOLUME */
+
+        volumeBar.addEventListener(
+            "input",
+            function() {
+
+                video.volume =
+                    volumeBar.value;
+
+                video.muted =
+                    false;
+
+                soundButton.textContent =
+                    "Sound";
+
+            }
+        );
+
+
+        /* PLAY EVENT */
+
+        video.addEventListener(
+            "play",
+            function() {
+
+                playButton.textContent =
+                    "Pause";
+
+            }
+        );
+
+
+        /* PAUSE EVENT */
+
+        video.addEventListener(
+            "pause",
+            function() {
+
+                playButton.textContent =
+                    "Play";
+
+            }
+        );
+
+
+        /* VIDEO ERROR */
+
+        video.addEventListener(
+            "error",
+            function() {
+
+                message.style.display =
+                    "block";
+
+                message.textContent =
+                    "Video file was not found or cannot be played.";
+
+            }
+        );
+/* ============================= */
+/* AUTO HIDE VIDEO CONTROLS */
+/* ============================= */
+
+let hideControlsTimer;
+
+function resetControlsTimer() {
+
+    // আগের timer বন্ধ
+    clearTimeout(hideControlsTimer);
+
+    // Controls দেখাও
+    player.classList.remove("hide-controls");
+
+    // Video চললে 3 সেকেন্ড পর hide
+    if (!video.paused) {
+
+        hideControlsTimer = setTimeout(function () {
+
+            player.classList.add("hide-controls");
+
+        }, 3000);
+
+    }
+}
+
+
+/* Mouse move করলে controls দেখাবে */
+
+player.addEventListener("mousemove", function () {
+
+    resetControlsTimer();
+
+});
+
+
+/* Mouse enter করলে controls দেখাবে */
+
+player.addEventListener("mouseenter", function () {
+
+    resetControlsTimer();
+
+});
+
+
+/* Video Play */
+
+video.addEventListener("play", function () {
+
+    resetControlsTimer();
+
+});
+
+
+/* Video Pause */
+
+video.addEventListener("pause", function () {
+
+    clearTimeout(hideControlsTimer);
+
+    player.classList.remove("hide-controls");
+
+});
+
+
+/* Video শেষ হলে controls দেখাবে */
+
+video.addEventListener("ended", function () {
+
+    clearTimeout(hideControlsTimer);
+
+    player.classList.remove("hide-controls");
+
+});
+
+
+/* Mobile Touch */
+
+player.addEventListener("touchstart", function () {
+
+    resetControlsTimer();
+
+});
+    </script>
+
+</body>
+
+</html>
