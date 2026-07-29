@@ -821,3 +821,39 @@ footer {
     opacity: 0;
     pointer-events: none;
 }
+/* =========================
+   RAHAT EDGE CREATOR BOX
+========================= */
+
+.creator-box {
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.creator-box h2 {
+    margin: 10px 0;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+.creator-box h2 span {
+    color: #e50914;
+}
+
+.creator-box p {
+    color: #aaa;
+}
+
+
+/* =========================
+   FOOTER CREATOR NAME
+========================= */
+
+footer strong {
+    color: #e50914;
+    letter-spacing: 1px;
+}
