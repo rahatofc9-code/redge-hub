@@ -857,3 +857,68 @@ footer strong {
     color: #e50914;
     letter-spacing: 1px;
 }
+/* =========================
+   ANIME EMPTY PAGE
+========================= */
+
+.anime-empty {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 20px;
+
+    background: #0b0b0f;
+}
+
+.anime-empty-box {
+    width: 100%;
+    max-width: 600px;
+
+    padding: 60px 30px;
+
+    text-align: center;
+
+    background: #15151b;
+
+    border: 1px solid #25252d;
+    border-radius: 15px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.anime-icon {
+    margin-bottom: 20px;
+
+    font-size: 55px;
+}
+
+.anime-empty-box .section-label {
+    margin-bottom: 12px;
+}
+
+.anime-empty-box h1 {
+    margin-bottom: 15px;
+
+    font-size: 38px;
+}
+
+.anime-empty-box p:not(.section-label) {
+    margin-bottom: 10px;
+
+    color: #bbb;
+
+    line-height: 1.7;
+}
+
+.anime-empty-box span {
+    display: block;
+
+    margin-bottom: 30px;
+
+    color: #777;
+
+    font-size: 14px;
+}
