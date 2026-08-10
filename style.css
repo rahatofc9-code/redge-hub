@@ -1059,3 +1059,11 @@ footer {
     background: rgba(21, 21, 27, 0.30);
     backdrop-filter: blur(3px);
 }
+@media (max-width: 768px) {
+
+    .hero {
+        background-position: center top;
+        min-height: 600px;
+    }
+
+}
