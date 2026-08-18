@@ -1,204 +1,216 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="UTF-8">
+        <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Movies - REDGE HUB</title>
+        <title>Movies - REDGE HUB</title>
 
-    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-<header class="navbar">
+    <header class="navbar">
 
-    <div class="logo">
-        REDGE <span>HUB</span>
-    </div>
-
-    <nav>
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="anime.html">
-            Anime
-        </a>
-
-        <a href="movies.html" class="active">
-            Movies
-        </a>
-
-        <a href="index.html#about">
-            About
-        </a>
-
-    </nav>
-
-    <div class="search-box">
-
-        <input
-            type="text"
-            placeholder="Search Movie..."
-        >
-
-        <button>
-            🔍
-        </button>
-
-    </div>
-
-</header>
-
-    <section class="content-section">
-
-    <div class="section-header">
-
-        <div>
-
-            <p class="section-label">
-                EXPLORE
-            </p>
-
-            <h2>
-                Movie Collection
-            </h2>
-
+        <div class="logo">
+            REDGE <span>HUB</span>
         </div>
 
-        <span class="count">
-            3 Movies
-        </span>
+        <nav>
 
-    </div>
+            <a href="index.html">
+                Home
+            </a>
 
+            <a href="anime.html">
+                Anime
+            </a>
 
-    <div class="anime-grid">
+            <a href="movies.html" class="active">
+                Movies
+            </a>
 
+            <a href="index.html#about">
+                About
+            </a>
 
-        <!-- =========================
-             A SILENT VOICE
-        ========================= -->
+        </nav>
 
-        <div class="anime-card">
+        <div class="search-box">
 
-            <div class="poster">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search Movie..."
+    >
 
-                <img
-                    src="images/a-silent-voice.jpg"
-                    alt="A Silent Voice"
-                >
+    <button id="searchBtn">
+        🔍
+    </button>
 
-            </div>
+</div>
 
-            <div class="card-info">
+    </header>
 
-                <h3>
-                    A Silent Voice
-                </h3>
+        <section class="content-section">
 
-                <p>
-                    Drama • Romance
+        <div class="section-header">
+
+            <div>
+
+                <p class="section-label">
+                    EXPLORE
                 </p>
 
-                <a
-                    href="a-silent-voice.html"
-                    class="card-details-btn"
-                >
-                    View Details
-                </a>
+                <h2>
+                    Movie Collection
+                </h2>
 
             </div>
+
+            <span class="count">
+                3 Movies
+            </span>
+
+        </div>
+        <div id="noResults" class="no-results">
+    <div class="anime-icon">🔍</div>
+
+    <h2>No Movies Found</h2>
+
+    <p>
+        We couldn't find a movie matching your search.
+    </p>
+
+    <span>
+        Try searching with another name.
+    </span>
+</div>
+
+
+        <div class="anime-grid">
+           <!-- =========================
+                A SILENT VOICE
+            ========================= -->
+
+            <div class="anime-card">
+
+                <div class="poster">
+
+                    <img
+                        src="images/a-silent-voice.jpg"
+                        alt="A Silent Voice"
+                    >
+
+                </div>
+
+                <div class="card-info">
+
+                    <h3>
+                        A Silent Voice
+                    </h3>
+
+                    <p>
+                        Drama • Romance
+                    </p>
+
+                    <a
+                        href="a-silent-voice.html"
+                        class="card-details-btn"
+                    >
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                YOUR NAME
+            ========================= -->
+
+            <div class="anime-card">
+
+                <div class="poster">
+
+                    <img
+                        src="images/your-name.jpg"
+                        alt="Your Name"
+                    >
+
+                </div>
+
+                <div class="card-info">
+
+                    <h3>
+                        Your Name
+                    </h3>
+
+                    <p>
+                        Romance • Fantasy
+                    </p>
+
+                    <a
+                        href="your-name.html"
+                        class="card-details-btn"
+                    >
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                I WANT TO EAT YOUR PANCREAS
+            ========================= -->
+
+            <div class="anime-card">
+
+                <div class="poster">
+
+                    <img
+                        src="images/i-want-to-eat-your-pancreas.jpg"
+                        alt="I Want to Eat Your Pancreas"
+                    >
+
+                </div>
+
+                <div class="card-info">
+
+                    <h3>
+                        I Want to Eat Your Pancreas
+                    </h3>
+
+                    <p>
+                        Drama • Romance
+                    </p>
+
+                    <a
+                        href="i-want-to-eat-your-pancreas.html"
+                        class="card-details-btn"
+                    >
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
 
         </div>
 
-
-        <!-- =========================
-             YOUR NAME
-        ========================= -->
-
-        <div class="anime-card">
-
-            <div class="poster">
-
-                <img
-                    src="images/your-name.jpg"
-                    alt="Your Name"
-                >
-
-            </div>
-
-            <div class="card-info">
-
-                <h3>
-                    Your Name
-                </h3>
-
-                <p>
-                    Romance • Fantasy
-                </p>
-
-                <a
-                    href="your-name.html"
-                    class="card-details-btn"
-                >
-                    View Details
-                </a>
-
-            </div>
-
-        </div>
+    </section>
 
 
-        <!-- =========================
-             I WANT TO EAT YOUR PANCREAS
-        ========================= -->
-
-        <div class="anime-card">
-
-            <div class="poster">
-
-                <img
-                    src="images/i-want-to-eat-your-pancreas.jpg"
-                    alt="I Want to Eat Your Pancreas"
-                >
-
-            </div>
-
-            <div class="card-info">
-
-                <h3>
-                    I Want to Eat Your Pancreas
-                </h3>
-
-                <p>
-                    Drama • Romance
-                </p>
-
-                <a
-                    href="i-want-to-eat-your-pancreas.html"
-                    class="card-details-btn"
-                >
-                    View Details
-                </a>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<footer>
+    <footer>
 
     <p>
         © 2026 REDGE HUB.
@@ -215,11 +227,21 @@
 </footer>
 
 
-</body>
-
 <video class="live-wallpaper" autoplay muted loop playsinline>
-    <source src="videos/wallpaper.mp4" type="video/mp4">
+
+    <source
+        src="videos/wallpaper.mp4"
+        type="video/mp4"
+    >
+
 </video>
 
+
 <div class="wallpaper-overlay"></div>
+
+
+<script src="script.js"></script>
+
+</body>
+
 </html>

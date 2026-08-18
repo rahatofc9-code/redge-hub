@@ -31,7 +31,12 @@
     loop
     playsinline
 >
-    <source src="videos/wallpaper.mp4" type="video/mp4">
+
+    <source
+        src="videos/wallpaper.mp4"
+        type="video/mp4"
+    >
+
 </video>
 
 <div class="wallpaper-overlay"></div>
@@ -44,46 +49,89 @@
 
 <header class="navbar">
 
+
+    <!-- LOGO -->
+
     <div class="logo">
+
         REDGE <span>HUB</span>
-    </div>
-
-
-    <nav>
-
-        <a href="index.html" class="active">
-            Home
-        </a>
-
-        <a href="anime.html">
-            Anime
-        </a>
-
-        <a href="movies.html">
-            Movies
-        </a>
-
-        <a href="#about">
-            About
-        </a>
-
-    </nav>
-
-
-    <div class="search-box">
-
-        <input
-            type="text"
-            placeholder="Search Movie..."
-        >
-
-        <button>
-            🔍
-        </button>
 
     </div>
+
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="nav-right">
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Movie..."
+            >
+
+            <button id="searchBtn">
+                🔍
+            </button>
+
+        </div>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav>
+
+            <a
+                href="index.html"
+                class="active"
+            >
+                Home
+            </a>
+
+
+            <a href="anime.html">
+                Anime
+            </a>
+
+
+            <a href="movies.html">
+                Movies
+            </a>
+
+
+            <a href="#about">
+                About
+            </a>
+
+        </nav>
+
+
+    </div>
+
 
 </header>
+
+<div id="noResults" class="no-results">
+
+    <div class="anime-icon">🔍</div>
+
+    <h2>No Movies Found</h2>
+
+    <p>
+        We couldn't find a movie matching your search.
+    </p>
+
+    <span>
+        Try searching with another name.
+    </span>
+
+</div>
 
 
 
@@ -93,7 +141,9 @@
 
 <section class="hero">
 
+
     <div class="hero-content">
+
 
         <p class="welcome">
             WELCOME TO
@@ -113,7 +163,9 @@
 
         </p>
 
+
     </div>
+
 
 </section>
 
@@ -131,11 +183,13 @@
 
     <div class="section-header">
 
+
         <div>
 
             <p class="section-label">
                 CREATOR
             </p>
+
 
             <h2>
                 About REDGE HUB
@@ -143,10 +197,15 @@
 
         </div>
 
+
     </div>
 
 
+
+    <!-- CREATOR BOX -->
+
     <div class="creator-box">
+
 
         <p>
             Welcome to REDGE HUB.
@@ -162,6 +221,7 @@
             Created with passion by Rahat EDGE.
         </p>
 
+
     </div>
 
 
@@ -175,6 +235,36 @@
 
 <footer>
 
+
+    <!-- INSTAGRAM -->
+
+    <a
+        href="https://www.instagram.com/garouxyz07/"
+        target="_blank"
+        class="instagram-btn"
+    >
+        Instagram
+    </a>
+    <a href="https://www.facebook.com/share/1EfAMHEUQi/"
+   target="_blank"
+   class="social-btn facebook-btn">
+    Facebook
+</a>
+
+<a href="https://vm.tiktok.com/ZS9kXHd3gx21Y-xjdQW/"
+   target="_blank"
+   class="social-btn tiktok-btn">
+    TikTok
+</a>
+
+<a href="https://t.me/rahatedge404"
+   target="_blank"
+   class="social-btn telegram-btn">
+    Telegram
+</a>
+
+
+
     <p>
         © 2026 REDGE HUB.
         All Rights Reserved.
@@ -182,13 +272,25 @@
 
 
     <p>
+
         Created by
+
         <strong>
             Rahat EDGE
         </strong>
+
     </p>
 
+
 </footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="script.js"></script>
 
 
 </body>
