@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rahatofc9-code.github.io/redge-hub/sitemap.xml
