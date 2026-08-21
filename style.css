@@ -1417,3 +1417,15 @@ footer {
         background-repeat: no-repeat;
     }
 }
+
+    /* Phone-video */
+    .desktop-wallpaper {
+        display: none;
+    }
+
+    /* Phone-overlay */
+    .wallpaper-overlay {
+        display: block;
+        background: rgba(0, 0, 0, 0.30);
+    }
+}
